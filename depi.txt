@@ -1,0 +1,16 @@
+Scenario 1 (webapp-ssd): Using pode with nodeSelector: disktype=ssd and worked in node01 ( becuase There is a lebel disktype=ssd )
+
+
+---------------------------
+
+Scenario 2 (logging-agent): Using pode with nodeAffinity (required): disktype=hhd and worked in master-node ( becuase There is a lebel disktype=hhd )
+
+-----------------------------------------------------------------------------------------------------
+
+
+Scenario 3 (monitoring-agent): node has taint:key1=value1:NoSchedule and we add Toleration with pod ( this let pod connect and worked in node )
+
+--------------------------------------------------------------------------------
+
+
+Scenario 4 (payments-service): node has required: ssd , preferred: region=us-east, toleration: taint: dedicated=payments
